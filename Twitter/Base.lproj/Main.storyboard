@@ -33,10 +33,19 @@
                                     <action selector="onLoginButton:" destination="2qs-1T-dvb" eventType="touchUpInside" id="duk-OY-3J0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-Rb-tdc">
+                                <rect key="frame" x="67.5" y="50" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BDy-f3-btp"/>
+                                    <constraint firstAttribute="height" constant="240" id="g7v-G5-2Ht"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mJL-Rb-tdc" firstAttribute="centerX" secondItem="eYF-QH-3dC" secondAttribute="centerX" id="eVs-Ef-dJL"/>
                             <constraint firstItem="Vxw-gU-M7u" firstAttribute="centerX" secondItem="eYF-QH-3dC" secondAttribute="centerX" id="jCw-T2-zDa"/>
+                            <constraint firstItem="mJL-Rb-tdc" firstAttribute="top" secondItem="IeA-X3-boL" secondAttribute="top" constant="30" id="jLK-aq-EAg"/>
                             <constraint firstItem="Vxw-gU-M7u" firstAttribute="centerY" secondItem="eYF-QH-3dC" secondAttribute="centerY" id="sms-Bh-mWv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IeA-X3-boL"/>
@@ -143,4 +152,7 @@
             <point key="canvasLocation" x="-960" y="644"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TwitterLogoBlue" width="400" height="400"/>
+    </resources>
 </document>
