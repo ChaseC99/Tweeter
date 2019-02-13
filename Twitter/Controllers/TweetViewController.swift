@@ -8,14 +8,19 @@
 
 import UIKit
 
-class TweetViewController: UIViewController {
+class TweetViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetTextField: UITextView!
+    @IBOutlet weak var characterCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tweetTextField.delegate = self
         tweetTextField.becomeFirstResponder()
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        characterCountLabel.text = String(textView.text.count)
     }
     
     @IBAction func onCancel(_ sender: Any) {

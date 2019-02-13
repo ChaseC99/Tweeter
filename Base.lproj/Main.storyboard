@@ -182,11 +182,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssE-LQ-ydb">
+                                <rect key="frame" x="0.0" y="222" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgf-QR-nPk">
+                                <rect key="frame" x="145" y="243" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hgf-QR-nPk" firstAttribute="centerX" secondItem="jPD-ki-lVe" secondAttribute="centerX" id="61c-an-64q"/>
+                            <constraint firstItem="hgf-QR-nPk" firstAttribute="top" secondItem="ssE-LQ-ydb" secondAttribute="bottom" id="7pm-8A-sd5"/>
+                            <constraint firstItem="wCT-fc-kh3" firstAttribute="trailing" secondItem="ssE-LQ-ydb" secondAttribute="trailing" id="BUM-to-sfP"/>
+                            <constraint firstItem="ssE-LQ-ydb" firstAttribute="leading" secondItem="wCT-fc-kh3" secondAttribute="leading" id="EQw-Lf-xyU"/>
                             <constraint firstItem="NhB-Eu-J89" firstAttribute="top" secondItem="wCT-fc-kh3" secondAttribute="top" id="eaf-As-zzy"/>
                             <constraint firstItem="wCT-fc-kh3" firstAttribute="trailing" secondItem="NhB-Eu-J89" secondAttribute="trailing" constant="16" id="lWk-Xf-ECi"/>
+                            <constraint firstItem="ssE-LQ-ydb" firstAttribute="top" secondItem="NhB-Eu-J89" secondAttribute="bottom" constant="8" id="pp4-yy-WBX"/>
                             <constraint firstItem="NhB-Eu-J89" firstAttribute="leading" secondItem="wCT-fc-kh3" secondAttribute="leading" constant="16" id="xEJ-RW-O2p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wCT-fc-kh3"/>
@@ -206,12 +223,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="characterCountLabel" destination="ssE-LQ-ydb" id="X1A-Pw-JXx"/>
                         <outlet property="tweetTextField" destination="NhB-Eu-J89" id="eSL-k0-PK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmv-xM-sHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847" y="644"/>
+            <point key="canvasLocation" x="1845.5999999999999" y="643.62818590704649"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m6V-I1-myb">
