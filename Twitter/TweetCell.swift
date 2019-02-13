@@ -18,6 +18,7 @@ class TweetCell: UITableViewCell {
     
     var tweetId = 0
     var favorited = false
+    var retweeted = false
     
     @IBAction func favTweet(_ sender: Any) {
         let toBeFav = !favorited
@@ -37,6 +38,11 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func retweet(_ sender: Any) {
+        TwitterAPICaller.client?.retweet(tweetId: tweetId, success: {
+            self.setRetweet(true)
+            }, failure: {(error) in
+                print("Error in retweeting: \(error.localizedDescription)")
+        })
     }
     
     func setFavorite(_ isFavorited: Bool) {
@@ -45,6 +51,14 @@ class TweetCell: UITableViewCell {
             favButton.setImage(UIImage(named: "favor-icon-red"), for: UIControl.State.normal)
         } else {
             favButton.setImage(UIImage(named: "favor-icon"), for: UIControl.State.normal)
+        }
+    }
+    
+    func setRetweet(_ isRetweeted: Bool){
+        if (isRetweeted) {
+            rtButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
+        } else {
+            rtButton.setImage(UIImage(named: "retweet-icon"), for: UIControl.State.normal)
         }
     }
     

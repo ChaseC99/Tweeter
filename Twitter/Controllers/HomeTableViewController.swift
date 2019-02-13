@@ -76,6 +76,7 @@ class HomeTableViewController: UITableViewController {
         cell.tweetContentLabel.text = (tweetArray[indexPath.row]["text"] as! String)
         cell.userNameLabel.text = (user["name"] as! String)
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.setRetweet(tweetArray[indexPath.row]["retweeted"] as! Bool)
         cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
         
         return cell
